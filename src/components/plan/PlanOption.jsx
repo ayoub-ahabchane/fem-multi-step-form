@@ -25,16 +25,16 @@ const PlanOption = ({ icon, id, tier, billing, price }) => {
       />
       <label
         htmlFor={`${tier}-${billing}`}
-        className={`flex cursor-pointer ${
+        className={`flex cursor-pointer lg:flex-col ${
           billing === "monthly" ? "items-center" : "items-start"
-        } gap-3.5 rounded-lg border border-fem-border bg-white p-3.5 focus-within:border-fem-purple hover:border-fem-purple peer-checked:border-fem-purple peer-checked:bg-fem-lightgray`}
+        } gap-3.5 rounded-lg border border-fem-border bg-white p-3.5 focus-within:border-fem-purple hover:border-fem-purple peer-checked:border-fem-purple peer-checked:bg-fem-lightgray lg:items-start lg:gap-10 lg:p-4`}
       >
         {icon}
         <div className="flex flex-col gap-0.5">
           <span className="block font-medium capitalize text-fem-denim">
             {tier}
           </span>
-          <span className="block text-fem-gray">
+          <span className="block text-fem-gray lg:text-sm">
             ${price}/{billing === "monthly" ? "mo" : "yr"}
           </span>
           {billing === "yearly" && (

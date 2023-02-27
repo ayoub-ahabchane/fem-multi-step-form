@@ -4,6 +4,7 @@ export const formContext = createContext();
 
 const FormContextProvider = ({ children }) => {
   const [isFormComplete, setIsFormComplete] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
   const [formStep, setFormStep] = useState(1);
   const [personalInfo, setPersonalInfo] = useState({
     name: "",
@@ -97,6 +98,15 @@ const FormContextProvider = ({ children }) => {
   ];
 
   useEffect(() => {
+    const { name, phone, email } = personalInfo;
+    if (name && phone && email) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [personalInfo]);
+
+  useEffect(() => {
     if (userAddons.length > 0 && userBilling === "monthly") {
       setUserAddons((prevAddons) => {
         return prevAddons.map((prevAddon) => {
@@ -154,6 +164,8 @@ const FormContextProvider = ({ children }) => {
         setFormStep,
         isFormComplete,
         setIsFormComplete,
+        isFormValid,
+        setIsFormValid,
       }}
     >
       {children}

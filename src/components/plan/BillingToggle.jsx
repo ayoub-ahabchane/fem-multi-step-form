@@ -26,7 +26,7 @@ const BillingToggle = () => {
       />
       <label
         htmlFor="yearlyBilling"
-        className="flex items-center justify-center gap-6 py-3.5 text-sm font-medium"
+        className="flex cursor-pointer items-center justify-center gap-6 py-3.5 text-sm font-medium"
       >
         <span
           className={`${

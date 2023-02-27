@@ -10,13 +10,15 @@ const AddonsForm = () => {
   }));
 
   return (
-    <section>
-      <div role="non" className="mb-5">
-        <h1 className="mb-2 text-2xl font-bold text-fem-denim">Pick add-ons</h1>
+    <div role="none">
+      <header className="mb-5 lg:mb-10">
+        <h1 className="mb-2 text-2xl font-bold text-fem-denim lg:mb-2.5 lg:text-[2rem]">
+          Pick add-ons
+        </h1>
         <p className="text-base text-fem-gray">
           Add-ons help enhance your gaming experience.
         </p>
-      </div>
+      </header>
       <form action="post">
         <fieldset className="flex flex-col gap-3.5">
           {renderedAddons.map((addon) => (
@@ -24,7 +26,7 @@ const AddonsForm = () => {
           ))}
         </fieldset>
       </form>
-    </section>
+    </div>
   );
 };
 

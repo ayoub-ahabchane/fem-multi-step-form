@@ -14,9 +14,12 @@ module.exports = {
         "fem-border": "#D6D9E6",
         "fem-lightgray": "#F8F9FF",
         "fem-purple": "#483EFF",
+        "fem-lightblue": "#ABBCFF",
+        "fem-error": "#EE374A",
       },
       backgroundImage: {
         "mobile-pattern": "url('./assets/images/bg-sidebar-mobile.svg')",
+        "desktop-pattern": "url('./assets/images/bg-sidebar-desktop.svg')",
       },
     },
   },

@@ -9,9 +9,11 @@
   body {
     @apply bg-fem-sky;
     @apply h-full;
+    @apply items-center 
+    lg:grid;
   }
 }
 
 #root {
-  @apply h-full;
+  @apply h-full lg:h-auto;
 }

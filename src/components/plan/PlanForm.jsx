@@ -22,17 +22,17 @@ const PlanForm = () => {
   }));
 
   return (
-    <section>
-      <div role="non" className="mb-5">
-        <h1 className="mb-2 text-2xl font-bold text-fem-denim">
+    <div role="none">
+      <header className="mb-5 lg:mb-10">
+        <h1 className="mb-2 text-2xl font-bold text-fem-denim lg:mb-2.5 lg:text-[2rem]">
           Select your plan
         </h1>
         <p className="text-base text-fem-gray">
           You have the option of monthly or yearly billing.
         </p>
-      </div>
+      </header>
       <form action="post">
-        <fieldset className="mb-6 flex flex-col gap-3.5">
+        <fieldset className="mb-6 flex flex-col gap-3.5 lg:mb-8 lg:grid lg:grid-cols-3 lg:gap-x-[1.125rem]">
           {renderedPlans.map((plan) => (
             <PlanOption key={plan.id} {...plan} />
           ))}
@@ -41,7 +41,7 @@ const PlanForm = () => {
           <BillingToggle />
         </div>
       </form>
-    </section>
+    </div>
   );
 };
 

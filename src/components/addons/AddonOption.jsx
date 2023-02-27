@@ -9,7 +9,7 @@ const AddonOption = ({ id, title, billing, price, desc }) => {
   return (
     <label
       htmlFor={id}
-      className={`flex cursor-pointer items-center justify-between gap-4 rounded-lg border border-fem-border px-4 py-3 ${
+      className={`flex cursor-pointer items-center justify-between gap-4 rounded-lg border border-fem-border px-4 py-3 lg:gap-6 lg:py-4 lg:px-6 ${
         isIncluded ? "border-fem-purple bg-fem-lightgray" : "bg-white"
       } focus-within:border-fem-purple hover:border-fem-purple`}
     >
@@ -39,10 +39,12 @@ const AddonOption = ({ id, title, billing, price, desc }) => {
         }}
       />
       <div className="grow">
-        <p className="text-sm font-medium text-fem-denim">{title}</p>
-        <p className="text-xs text-fem-gray">{desc}</p>
+        <p className="text-sm font-medium text-fem-denim lg:mb-1 lg:text-base">
+          {title}
+        </p>
+        <p className="text-xs text-fem-gray lg:text-sm">{desc}</p>
       </div>
-      <span className="inline-block text-xs text-fem-purple">
+      <span className="inline-block text-xs text-fem-purple lg:text-sm">
         ${price}/{billing === "monthly" ? "mo" : "yr"}
       </span>
     </label>

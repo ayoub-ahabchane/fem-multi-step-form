@@ -8,7 +8,7 @@ const Thankyou = () => {
       <section className="flex flex-col items-center justify-center gap-6 py-16">
         <CompleteLogo />
         <div>
-          <h1 className="mb-2.5 text-center text-2xl font-bold text-fem-denim">
+          <h1 className="mb-2 text-center text-2xl font-bold text-fem-denim lg:mb-2.5 lg:text-[2rem]">
             Thank you!
           </h1>
           <p className="text-center text-fem-gray">
