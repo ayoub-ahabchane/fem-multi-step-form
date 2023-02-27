@@ -25,7 +25,7 @@ const PersonalInfoForm = () => {
     }
   }, [phoneInput, nameInput, emailInput]);
   return (
-    <div role="none">
+    <div role="none presentation">
       <header className="mb-5 lg:mb-10">
         <h1 className="mb-2 text-2xl font-bold text-fem-denim lg:mb-2.5 lg:text-[2rem]">
           Personal Info
